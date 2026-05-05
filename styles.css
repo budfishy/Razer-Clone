@@ -57,24 +57,25 @@ nav {
   font-size: 1.7rem;
 }
 
-.hero {
-  display: grid;
-  place-items: center;
-  padding: 2rem;
-}
-
 .hero-img-background {
   width: 100%;
   position: absolute;
+
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  flex-direction: column;
 }
 
 .hero-container {
   z-index: 10;
   display: flex;
-  justify-content: center;
+  justify-content: start;
+
   flex-direction: column;
   position: relative;
   gap: 0.4rem;
+  padding-top: 2rem;
 }
 
 .description {
@@ -100,10 +101,6 @@ button {
   padding: 0 0.9rem;
 }
 
-.section {
-  height: 68vh;
-}
-
 .arrow::after {
   color: var(--color-primary);
   content: ">";
@@ -112,4 +109,31 @@ button {
 
 .light {
   color: var(--color-light);
+}
+
+@media (min-width: 300px) {
+  section {
+    height: 51vh;
+  }
+}
+
+@media (min-width: 374px) {
+  section {
+    height: 60vh;
+  }
+}
+
+@media (min-width: 420px) {
+  section {
+    height: 66vh;
+  }
+}
+
+@media (min-width: 760px) {
+  section {
+    height: 99vh;
+  }
+  .hero {
+    padding-top: 5rem;
+  }
 }
